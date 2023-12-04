@@ -18,7 +18,7 @@ for l in lines:
 
     inter = winning.intersection(ours)
     if len(inter) > 0:
-        sum_points += 2 ** (len(winning.intersection(ours)) - 1)
+        sum_points += 2 ** (len(inter) - 1)
 
 
 print(sum_points)
