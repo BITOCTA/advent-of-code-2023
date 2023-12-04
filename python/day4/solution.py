@@ -33,11 +33,8 @@ for l_i, l in enumerate(lines):
 
     inter = winning.intersection(ours)
     if len(inter) > 0:
-        for _ in range(copies[l_i]):
-            winning_cards = len(inter)
-
-            for w_c in range(1, winning_cards + 1):
-                copies[l_i + w_c] += 1
+        for w_c in range(1, len(inter) + 1):
+            copies[l_i + w_c] += copies[l_i]
 
 copies_sum = 0
 for i in range(len(lines)):
